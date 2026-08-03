@@ -1,6 +1,6 @@
 # Angular 16 — Estrutura de Pastas e Arquivos
 
-[← Voltar](https://github.com/JosiTubaroski/FullStackAngular16_DotNet/blob/main/README.md)
+[← Voltar](https://github.com/joycequoos/FullStackAngular16_DotNet/blob/main/README.md)
 
 Quando um projeto **Angular 16** é criado usando o Angular CLI (com o comando `ng new nome-do-projeto`), ele já gera uma estrutura completa de arquivos e pastas, pensada para escalabilidade e boas práticas. Este guia resume a estrutura inicial e para que serve cada parte.
 
