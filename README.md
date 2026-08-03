@@ -1,74 +1,75 @@
-<div> 
-<p><a href="https://github.com/JosiTubaroski/-FullStackAngular_16_-_.NET/blob/main/README.md">Home</a></p>
-</div> 
+# Angular 16 — Estrutura de Pastas e Arquivos
 
-# Angular16 estrutura de Pastas e Arquivos
+[← Voltar](https://github.com/JosiTubaroski/FullStackAngular16_DotNet/blob/main/README.md)
 
-Quando você cria um projeto em <b>Angular 16</b> usando o Angular CLI (com o comando ng new nome-do-projeto), ele já gera uma <b>estrutura completa</b> de arquivos e pastas, pensada para escalabilidade e boas práticas.
+Quando um projeto **Angular 16** é criado usando o Angular CLI (com o comando `ng new nome-do-projeto`), ele já gera uma estrutura completa de arquivos e pastas, pensada para escalabilidade e boas práticas. Este guia resume a estrutura inicial e para que serve cada parte.
 
-Aqui vai um resumo da <b>estrutura inicial</b> e <b>para que serve cada parte:</b>
+## Estrutura de Pastas Geradas pelo Angular 16
 
-## 🗂️ Estrutura de pastas geradas pelo Angular 16
+```
+meu-projeto/
+├── node_modules/
+├── src/
+│   ├── app/
+│   │   ├── app.component.ts
+│   │   ├── app.component.html
+│   │   ├── app.component.css
+│   │   └── app.module.ts
+│   ├── assets/
+│   ├── environments/
+│   ├── index.html
+│   ├── main.ts
+│   └── styles.css
+├── angular.json
+├── package.json
+├── tsconfig.json
+└── README.md
+```
 
-       meu-projeto/
-       ├── node_modules/
-       ├── src/
-       │   ├── app/
-       │   │   ├── app.component.ts
-       │   │   ├── app.component.html
-       │   │   ├── app.component.css
-       │   │   └── app.module.ts
-       │   ├── assets/
-       │   ├── environments/
-       │   ├── index.html
-       │   ├── main.ts
-       │   ├── styles.css
+## Entendendo Cada Parte
 
-       ├── angular.json
-       ├── package.json
-       ├── tsconfig.json
-       └── README.md
+### `node_modules/`
 
-### 🧠 Entendendo cada parte:
+- Pasta onde ficam todas as **dependências** do projeto (bibliotecas do Angular, entre outras).
+- Criada automaticamente ao rodar `npm install`.
 
-📁 node_modules/
+### `src/`
 
-- Pasta onde ficam <b>todas as dependências</b> do projeto (bibliotecas do Angular, etc).
-- Criada automaticamente com npm install.
+Onde vive o **código-fonte** da aplicação — componentes, módulos, serviços e rotas.
 
-📁 src/
+- `app.component.ts` — lógica do componente principal (`AppComponent`).
+- `app.component.html` — HTML do `AppComponent`.
+- `app.component.css` — estilo do `AppComponent`.
+- `app.module.ts` — **módulo raiz**, onde os componentes são declarados e outros módulos são importados.
 
-<b>Onde vive o código-fonte da sua aplicação.</b>
+### `src/assets/`
 
-- Aqui ficam os <b>componentes, módulos, serviços e rotas</b> da sua aplicação.
-- Exemplo:
-  - app.component.ts: lógica do componente principal (AppComponent).
-  - app.component.html: HTML do AppComponent.
-  - app.component.css: estilo do AppComponent.
-  - app.module.ts: <b>módulo raiz</b>, onde se declara os componentes e importa outros módulos.
+- Onde ficam imagens, fontes e outros arquivos estáticos usados no front-end.
 
- 📁 assets/
+### `src/environments/`
 
- - Onde ficam <b>imagens, fontes, arquivos estáticos</b> que você vai usar no front.
+- Define as variáveis de ambiente da aplicação:
+  - `environment.ts` — ambiente de **desenvolvimento**.
+  - `environment.prod.ts` — ambiente de **produção**.
 
-📁 environments/
+### `src/index.html`
 
-- Define variáveis de ambiente:
-  - environment.ts: ambiente de <b>desenvolvimento</b>
-  - environment.prod.ts: ambiente de <b>produção</b>
+- HTML base da aplicação — é aqui que o Angular injeta o app.
 
-📄 index.html
+### `src/main.ts`
 
-- HTML base da aplicação. Aqui é onde o Angular vai injetar o seu app.
+- **Ponto de entrada** da aplicação Angular.
+- Carrega o `AppModule` e inicializa o Angular.
 
-📄 main.ts
-
-- <b>Ponto de entrada</b> da aplicação Angular.
-- Ele carrega o AppModule e inicializa o Angular.
-
-📄 styles.css ou styles.scss
+### `src/styles.css` (ou `styles.scss`)
 
 - Estilo global da aplicação.
 
- 
-  
+## Arquivos de Configuração na Raiz do Projeto
+
+| Arquivo | Descrição |
+|---|---|
+| `angular.json` | Arquivo de configuração do projeto Angular — define build, estilos, assets, scripts e outras configurações da CLI. |
+| `package.json` | Lista as dependências do projeto (bibliotecas do Angular e de terceiros) e os scripts disponíveis (como `ng serve`, `ng build`). |
+| `tsconfig.json` | Configurações do compilador TypeScript, usadas em todo o projeto. |
+| `README.md` | Documentação padrão gerada automaticamente pelo Angular CLI ao criar o projeto. |
